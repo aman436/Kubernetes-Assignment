@@ -1,0 +1,11 @@
+FROM richarvey/nginx-php-fpm:1.8.2
+COPY index.html /var/www/html
+COPY index.php /var/www/html
+EXPOSE 80 443
+
+
+command to execute
+# docker build -t nginx .
+#sudo docker run -tid --link mysql:db -p 8181:80 nginx:latest
+
+# curl http://localhost:8181

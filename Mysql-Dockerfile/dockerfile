@@ -1,0 +1,14 @@
+FROM mysql/mysql-server
+ENV MYSQL_USER=raam \
+    MYSQL_PASSWORD=test1234 \
+    MYSQL_ROOT_PASSWORD=test1234 \
+    MYSQL_AUTHENTICATION_PLUGIN=mysql_native_password \
+    MYSQL_DATABASE=mydb
+COPY db.sql /docker-entrypoint-initdb.d/
+EXPOSE 3306
+
+
+# commands to execute for checking
+# docker build -t mysql .
+#sudo docker run -d --name mysql mysql:latest
+# sudo docker exec -ti mysql mysql -h localhost --port 3306 --protocol=tcp -u raam --password=test1234 -e "use mydb; SELECT*FROM Employees"

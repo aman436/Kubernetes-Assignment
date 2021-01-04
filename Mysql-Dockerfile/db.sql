@@ -1,0 +1,1 @@
+CREATE TABLE Employees (SrNo int AUTO_INCREMENT, EmployeeID int(11), FirstName varchar(255), LastName varchar(255), PRIMARY KEY (SrNo)); INSERT INTO Employees (EmployeeID, FirstName, LastName) VALUES (201,'jhon','wick');
